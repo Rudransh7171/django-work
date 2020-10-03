@@ -1,14 +1,31 @@
-{% extends 'base_layout.html' %}
-
-
 {% block content %}
-  <h1>Login</h1>
+  {% load static %}
+  <body class="box">
+
+
+  <link rel="stylesheet" href="{% static 'login.css' %}">
+
   <form class="site-form" action="{% url 'accounts:login' %}" method="post">
+    <img src="{% static 'club-hub.png' %}" alt="clubhub">
     {% csrf_token %}
-    {{form}}
+    {% for field in form %}
+      {{field.label}}
+      {{field}}
+    {% endfor %}
+    
+
     {% if request.GET.next %}
       <input type="hidden" name="next" value="{{ request.GET.next }}">
     {% endif %}
     <input type="submit" value="Login">
   </form>
+  <p>Don't have an account?</p>
+  <form class="wel-signup" action="/accounts/signup" method="post">
+    {% csrf_token %}
+
+    <input type="submit" value="Signup">
+
+  </form>
+  </body>
+
 {% endblock %}

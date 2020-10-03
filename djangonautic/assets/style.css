@@ -1,28 +1,28 @@
 body{
-  background: #000033;
+  background: white;
 }
 h1{
-  color: white;
+  color: black;
   font-family: "Lucida Console", Courier, monospace;
-  margin-left: 10%;
+  margin-left: 10px;
 
 
 }
 p{
-  color: white;
+  color: black;
   font-family: cursive;
   margin-left: 10%;
 
 }
 a{
-  color: white;
+  color: black;
   text-decoration: none;
   font-family: serif;
 
 
 }
 h2{
-  color: white;
+  color: black;
   margin-top: 50px;
   margin-left: 10%;
 }
@@ -35,13 +35,4 @@ h2{
 .img2{
   max-width: 50%;
 
-}
-form.site-form label{
-  color: white;
-}
-form.site-form span{
-  color: white;
-}
-form.wel-login input[type="submits"]{
-  color: red;
 }

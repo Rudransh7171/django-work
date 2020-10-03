@@ -1,11 +1,46 @@
-{% extends 'base_layout.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>signup</title>
+    <link rel="stylesheet" href="{% static 'signup.css' %}">
+    <link rel="Stylesheet" href= "{% static 'bootstrap.css' %}">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row-sm-1">
+        <div class="col-sm-7">
+          <div class="heading text-center">
 
 
-{% block content %}
-  <h1>Signup</h1>
-  <form class="site-form" action="/accounts/signup" method="post">
-    {% csrf_token %}
-    {{form}}
-    <input type="submit" value="Signup">
-  </form>
-{% endblock %}
+
+            <img class="logo" src="{% static 'clubhub.png' %}" alt="clubhub">
+            <p class="info" >Sign up to meet your club members and see photos and video from your friends </p>
+            <button type="submit" class="btn btn-primary btn-block" ><img src="{% static 'google_PNG19635.png' %}" >   Log in by Google</button>
+            <p class="or">OR<p>
+
+
+              <form class="site-form" action="/accounts/signup" method="post">
+                {% csrf_token %}
+                {% for field in form %}
+                  <div class="form-group">
+                  {{field}}
+                  </div>
+                {% endfor %}
+
+
+                <input type="submit" class="btn btn-primary btn-block" value="Signup">
+              </form>
+              <h5 class="terms">by Siging up , you agree to our <b>terms , Data policy </b>  and <b>Cookies</b> .</h5 >
+
+
+          <div class="right-column-login text-center">
+          <p >Have an Account ?<a href="{% url 'accounts:login' %}">Login</a></p>
+          </div>
+
+          </div>
+      </div>
+    </div>
+  </body>
+</html>

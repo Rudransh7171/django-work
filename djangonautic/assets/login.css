@@ -1,0 +1,38 @@
+body{
+  background-color: #F2F2F2	;
+}
+.site-form{
+
+
+    height: 350px;
+    width: 400px;
+    padding: 60px 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%,-50%);
+    background: white;
+    text-align: center;
+    border: 0.5px solid lightgrey;
+}
+.site-form img{
+  margin-top: -100px;
+  padding-bottom: 30px;
+  margin-left: 20px;
+}
+
+
+.site-form input[type = "text"],.site-form input[type = "password"]{
+  border:0;
+  background: #F3F2F2;
+  color: black;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 1px solid lightgrey;
+  padding: 5px 10px;
+  width: 200px;
+  outline: none;
+  transition: 0.25s;
+}

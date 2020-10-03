@@ -1,13 +1,10 @@
 {% extends 'base_layout.html' %}
 {% block content %}
-  <h1>Article list</h1>
+  <h1>this clubhub's feeds</h1>
   <div class="articles">
-    {% for article in articles %}
-      <div class="article">
-        <h2><a href="{% url 'articles:details' slug=article.slug %}">{{article.title}}</a></h2>
-        <p>{{article.snippet}}</p>
-        <p>{{article.date}}</p>
-      </div>
-    {% endfor %}
-  </div>
+    <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
+      {% csrf_token %}
+      <button type="submit">logout</button>
+    </form>
+
 {% endblock %}
