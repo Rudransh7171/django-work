@@ -41,7 +41,28 @@ body
 {
     background-color: #fafafa;
 }
+/*clublogos*/
 
+/*.clublogo .frag img{
+  border-radius: 100px;
+  width: 100px;
+}
+.clublogo .graphex img{
+  border-radius: 100px;
+  width: 100px;
+}
+.clublogo .dsc img{
+  border-radius: 100px;
+  width: 100px;
+}
+.clublogo .studio img{
+  border-radius: 100px;
+  width: 100px;
+}
+.clublogo .management img{
+  border-radius: 100px;
+  width: 100px;
+}*/
 /*Wrapper is like a container of body*/
 #wrapper
 {
@@ -51,6 +72,12 @@ body
     flex-direction: column;
     justify-content: space-between;
     padding-top: 2rem;
+}
+.phone-app-demo
+{
+    height: 50rem;
+
+    flex: 1;
 }
 
 .container
@@ -67,48 +94,15 @@ body
 }
 
 /*smartphone image*/
-.phone-app-demo
-{
-    height: 50rem;
 
-    flex: 1;
-}
-#wrapper > .container .clublogo .technojam img{
-	border-radius: 100px;
-	margin: 0px -300px -200px;
-	width: 80px;
-}
-#wrapper > .container .clublogo .frag img{
-	border-radius: 100px;
-	margin: 0px -300px -250px -100px;
-	width: 80px;
-}
-#wrapper > .container .clublogo .management img{
-	border-radius: 100px;
-	margin: 0px -300px -185px 90px;
-	width: 80px;
-}
-#wrapper > .container .clublogo .dsc img{
-	border-radius: 100px;
-	margin: 0px -300px -400px;
-	width: 80px;
-}
-#wrapper > .container .clublogo .graphex img{
-	border-radius: 100px;
-	margin: 0px -300px -450px -100px;
-	width: 80px;
-}
-#wrapper > .container .clublogo .studio img{
-	border-radius: 100px;
-	margin: 0px -300px -400px 90px;
-	width: 80px;
-}
+
 /*form styling*/
 .form-data
 {
     width: 100%;
     max-width: 35rem;
     margin-top: 3rem;
+
 }
 
 .form-data form

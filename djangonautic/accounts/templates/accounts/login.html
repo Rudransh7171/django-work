@@ -1,31 +1,77 @@
-{% block content %}
+
   {% load static %}
-  <body class="box">
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Instagram login Form</title>
+    <link rel="stylesheet" href="{% static 'login1.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap.css' %}" >
+</head>
+<body>
+  <div class ="clublogo">
+    <!--<div class= "technojam">
+      <img src = "{% static 'technojam.jpg'%}">
+    </div>
+    <div class = "frag">
+      <img src = "{% static 'frag.jpg'%}"
+    </div>
+    <div class = "management">
+      <img src= "{% static 'management.jpg'%}">
+    </div>
+    <div class ="dsc"><img src="{% static 'dsc.jpg'%}"></div>
+    <div class = "graphex"><img src = "{% static 'graphex.jpg'%}"></div>
+    <div class = "studio"><img src = "{% static 'studio.jpg'%}"></div>-->
+  </div>
+  <div id="wrapper">
+    <div class="container text-center">
+        <div class="phone-app-demo">
+
+        </div>
 
 
-  <link rel="stylesheet" href="{% static 'login.css' %}">
 
-  <form class="site-form" action="{% url 'accounts:login' %}" method="post">
-    <img src="{% static 'club-hub.png' %}" alt="clubhub">
-    {% csrf_token %}
-    {% for field in form %}
-      {{field.label}}
-      {{field}}
-    {% endfor %}
-    
+      <div class="form-data">
+        <form class="site-form" action="{% url 'accounts:login' %}" method="post">
+          <div class="logo">
+            <img src="{% static 'clubhub.png' %}" alt="clubhub">
+          </div>
+          {% csrf_token %}
+          {% for field in form %}
 
-    {% if request.GET.next %}
-      <input type="hidden" name="next" value="{{ request.GET.next }}">
-    {% endif %}
-    <input type="submit" value="Login">
-  </form>
-  <p>Don't have an account?</p>
-  <form class="wel-signup" action="/accounts/signup" method="post">
-    {% csrf_token %}
+              {{field}}
 
-    <input type="submit" value="Signup">
+          {% endfor %}
+          {% if request.GET.next %}
+            <input type="hidden" name="next" value="{{ request.GET.next }}">
+          {% endif %}
+          <button class="form-btn" type="submit">Log in</button>
+          <span class="has-separator">Or</span>
+          <a href="#" class="facebook-login">
+              <i class="fab fa-facebook"></i> Log in with Facebook
+          </a>
+          <a class="password-reset" href="#">Forgot password?</a>
+        </form>
+        <div class="sign-up">
+            Don't an account? <a href="{% url 'accounts:signup' %}">Sign up</a>
+        </div>
+    </div>
+  </div>
+  <footer>
+    <div class="container">
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="/about">About Us</a></li>
 
-  </form>
-  </body>
+            </ul>
+        </nav>
 
-{% endblock %}
+    </div>
+  </footer>
+</div>
+
+</form>
+</body>
+</html>

@@ -24,10 +24,11 @@
               <form class="site-form" action="/accounts/signup" method="post">
                 {% csrf_token %}
                 {% for field in form %}
-                  <div class="form-group">
+                <div class="form-group">
                   {{field}}
-                  </div>
+                </div>
                 {% endfor %}
+
 
 
                 <input type="submit" class="btn btn-primary btn-block" value="Signup">
